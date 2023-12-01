@@ -1,0 +1,20 @@
+<div
+  class="face-share-card"
+  [ngClass]="{ snapped: faceShare.snapped === true }"
+>
+  <h2>{{ faceShare.title | uppercase }}</h2>
+  <p>Mis en ligne le {{ faceShare.createdAt | date : "medium" }}</p>
+  <p *ngIf="faceShare.location">{{ faceShare.location }}</p>
+  <img [src]="faceShare.imageUrl" [alt]="faceShare.title" />
+  <p>{{ faceShare.description }}</p>
+  <div>
+    <button (click)="onQalf()" class="qalf">
+      {{ faceShare.snapped ? "UNQALF" : "QALF" }}
+    </button>
+    <p>
+      <span [ngStyle]="{ color: 'rgb(0, ' + faceShare.snaps + ', 0)' }"
+        >{{ faceShare.snaps }} </span
+      >🔥
+    </p>
+  </div>
+</div>

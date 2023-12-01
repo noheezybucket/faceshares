@@ -1,0 +1,20 @@
+.header {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    
+    h1 {
+        margin: 0;
+    }
+}
+
+a {
+    color: white;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.active {
+    border-bottom: 2px solid white;
+}
